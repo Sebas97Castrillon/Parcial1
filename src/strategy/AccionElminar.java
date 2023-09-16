@@ -9,6 +9,6 @@ public class AccionElminar implements Accion{
     }
     @Override
     public int getOpcion() {
-        return 3;
+        return 4;
     }
 }

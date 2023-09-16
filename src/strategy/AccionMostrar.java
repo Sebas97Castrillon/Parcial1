@@ -1,15 +1,20 @@
 package src.strategy;
 
+import src.Menu;
+import src.factory.CreadorJuguete;
+import src.factory.CreadorJugueteCarrito;
+
 public class AccionMostrar implements Accion{
+
+    Menu menu = Menu.getInstance();
 
     @Override
     public void aplicar() {
-        System.out.println("Mostrar");
-
+        
     }
 
     @Override
     public int getOpcion() {
-        return 4;
+        return 5;
     }
 }

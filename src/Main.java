@@ -15,7 +15,13 @@ public class Main {
         Map<Integer, Accion> strategy = new AccionHandler().getStrategy();
         int opcion;
         do {
-            System.out.println("Ingrese una opción");
+            System.out.println("Seleccione una opción:");
+            System.out.println("1. Crear Carrito");
+            System.out.println("2. Crear Peluche");
+            System.out.println("3. Clonar Juguete");
+            System.out.println("4. Eliminar Juguete");
+            System.out.println("5. Mostrar Juguetes");
+            System.out.println("6. Salir");
             opcion = entradaUsuario.nextInt();
             entradaUsuario.nextLine();
             Accion accion = strategy.get(opcion);
@@ -28,6 +34,7 @@ public class Main {
                 System.out.println("Opción Inválida");
             } else {
                 accion.aplicar();
+                
             }
         }while(opcion != salir);
     }

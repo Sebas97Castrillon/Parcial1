@@ -1,4 +1,4 @@
-package src;
+package src.entity;
 
 public class Carrito {
 
@@ -11,8 +11,14 @@ public class Carrito {
         this.numeroPuertas = numeroPuertas;
         this.marca = marca;
     }
+    
 
-    public static CarritoBuilder builder(String color, int numeroPuertas, String marca){
+    @Override
+    public String toString() {
+        return "Carrito [color=" + color + ", numeroPuertas=" + numeroPuertas + ", marca=" + marca + "]";
+    }
+
+    public static CarritoBuilder builder(){
         return new CarritoBuilder();
     }
 
